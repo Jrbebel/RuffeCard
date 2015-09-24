@@ -2,4 +2,10 @@
 /app/logs/
 /app/config/parameters.yml
 /app/cache/
-/web/
+/app/config/deploy.rb
+/web/css/
+/web/fonts/
+/web/images/
+/web/js/
+/web/bundles/
+/Capfile

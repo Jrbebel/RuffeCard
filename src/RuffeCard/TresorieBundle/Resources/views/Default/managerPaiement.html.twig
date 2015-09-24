@@ -1,0 +1,36 @@
+{% extends "RuffeCardTresorieBundle:Default:Menu.html.twig" %}
+
+ {% block corp %}
+ 
+<div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientModifPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-suitcase"></span>Managers</h2>
+			                </div>
+    
+
+    <table class="record_properties table table-hover">
+        
+		<thead>
+            <tr class="success">
+                <th>Nom</th>
+                <th>Prenom</th>
+             	<th>Règlement</th>
+            </tr>
+        </thead>
+           
+		<tbody> 
+			{% for manager in Manager %} 
+            <tr>
+                <td>{{ manager.nom }}</td>
+                <td>{{ manager.prenom }}</td>
+                <td><a href="{{ path('Reglerpaiement',{'id': manager.id,'acteur':1}) }}"> a payer</a></br></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
+
+</div>
+ 		
+{% endblock corp %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html> 
+	{% include '::head.html.twig' %}
+
+    <body>
+       	  
+		 {% include '::header.html.twig' %}
+         {% include '::navBar.html.twig' %}
+   
+          <div class="container">  
+         {% block body %}
+         
+         
+         
+         {% endblock %}
+    
+            
+            <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+            <script type="text/javascript" src="{{asset('js/outline/*.js')}}"></script>
+            
+            <script type="text/javascript">
+          	$("#menu-toggle").click(function(e) {
+	             e.preventDefault();
+	             $("#wrapper").toggleClass("active");
+	     }); 
+           </script>
+            
+            </div> 
+         {% include '::footer.html.twig' %}   
+         
+        
+        {% block javascripts %} {% endblock %}
+{% block css %} {% endblock %}
+
+        </body>
+    
+    </html>
+
+        

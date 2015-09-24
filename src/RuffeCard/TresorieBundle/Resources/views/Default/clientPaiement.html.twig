@@ -1,0 +1,39 @@
+{% extends "RuffeCardTresorieBundle:Default:Menu.html.twig" %}
+
+ {% block corp %}
+ 
+<div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientModifPanel">
+			                    <h2 class="panel-title">
+			                         <span class="fa fa-users"></span>Client</h2>
+			                </div>
+   {% if Client is empty %}
+    aucun status de paiement pour les clients
+    
+    {% else %}
+
+    <table class="record_properties table table-hover">
+        
+		<thead>
+            <tr class="success">
+                <th>Nom</th>
+                <th>Prenom</th>
+             	<th>Règlement</th>
+            </tr>
+        </thead>
+           
+		<tbody> 
+           {% for client in Client %} 
+            <tr>
+                <td>{{ client	.nom }}</td>
+                <td>{{ client	.prenom }}</td>
+                <td><a href="{{ path('Reglerpaiement',{'id': client.id,'acteur':0}) }}"> a payer</a></br></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ {% endif %}
+
+</div>
+ 		
+{% endblock corp %}

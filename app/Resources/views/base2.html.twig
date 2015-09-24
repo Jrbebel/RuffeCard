@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html> 
+	{% include '::head.html.twig' %}
+
+    <body>
+       	 <div class="container"> 
+       	 
+       	 	{% block header %}
+       	 		
+       	 		<div class="row">
+       	 			{% include '::header.html.twig' %}
+         		</div>
+         		<div class="row">
+       	 			{% include '::navBar.html.twig' %}
+       	 		</div>
+       	 		
+       	 	{% endblock %}
+		
+       	 	{% block corps %}
+       	 		
+       	 		<div class="row">
+       	 			<div class="col-md-3" id="menuLeft"></div>
+       	 			<div class="col-md-9" id="corpsInterne"></div>
+         		</div>
+       	 	
+       	 	{% endblock %}
+       	 	
+       	 	{% block footer %}
+       	 		{% include '::footer.html.twig' %}
+       	 	{% endblock %}
+    
+			{% block javascripts %}
+				{% include '::javascript.html.twig' %}
+			{% endblock %}
+       	  
+       	  
+       	  </div>
+	</body>
+</html>           
+        
+        
+        
+
+
+<!DOCTYPE html>
+<html> 
+	{% include '::head.html.twig' %}
+
+    <body>
+       	 <div class="container">  
+		 {% include '::header.html.twig' %}
+         {% include '::navBar.html.twig' %}
+           
+         {% block body %}
+         
+         
+         
+         {% endblock %}
+    
+            
+            <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+            <script type="text/javascript" src="{{asset('js/outline/*.js')}}"></script>
+            
+            <script type="text/javascript">
+          	$("#menu-toggle").click(function(e) {
+	             e.preventDefault();
+	             $("#wrapper").toggleClass("active");
+	     }); 
+           </script>
+            
+         {% include '::footer.html.twig' %}   
+        {% block javascripts %} {% endblock %}
+{% block css %} {% endblock %}
+   </div>
+        </body>
+    
+    </html>
+
+        
+      <!-- Troisième version  -->
+      
+      
+      
+
+<!DOCTYPE html>
+<html> 
+	{% include '::head.html.twig' %}
+
+    <body>
+           	 	{% block header %}
+       	 		
+       	 		<div class="row">
+       	 			{% include '::header.html.twig' %}
+         		</div>
+         		<div class="row">
+       	 			{% include '::navBar.html.twig' %}
+       	 		</div>
+       	 		
+       	 	{% endblock %}
+    
+       	 <div class="container"> 
+       	 
+
+		
+       	 	{% block corps %}
+       	 		
+       	 		<div class="row">
+       	 			<div class="col-md-3" id="menuLeft"></div>
+       	 			<div class="col-md-9" id="corpsInterne"></div>
+         		</div>
+       	 	
+       	 	{% endblock %}
+       	 	
+       	 	
+    
+			{% block javascripts %}
+				{% include '::javascript.html.twig' %}
+			{% endblock %}
+       	  
+       	  
+       	  </div>
+       	  
+       	  {% block footer %}
+       	 		{% include '::footer.html.twig' %}
+       	 	{% endblock %}
+       	  
+	</body>
+</html> 
+    
+            
+            
+            
+            
+        
+
+   
+

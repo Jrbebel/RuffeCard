@@ -1,0 +1,108 @@
+{% extends "RuffeCardUserGestionBundle:Administrateur:Menu.html.twig" %}
+
+
+{% block corp -%}
+<div id="clientListing">
+	
+       <div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientListingPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-users"></span>Listing des clients</h2>
+			                </div> 
+
+ <div class="row">
+    <div class="col-md-12" id="tableclientListing">
+   
+    <table class="records_list table table-hover">
+        <thead>
+            <tr class="success">
+              
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>
+                	<i class="fa fa-female"></i> / <i class="fa fa-male"></i>
+                </th>
+                <th>Age</th>
+                <th><i class="fa fa-phone"></i>Fixe</th>
+                <th><i class="fa fa-mobile"></i>Port 1</th>
+                <th><i class="fa fa-envelope-o"></i> Email</th>
+                <th>Actions</th>
+              
+               <!--
+                <th>Id</th>  
+                <th><i class="fa fa-calendar"></i>Daybirth</th>
+                <th><i class="fa fa-mobile"></i>Port 2</th>
+                <th><i class="fa fa-mobile"></i>Port 3</th>
+                <th>Metier</th>
+                <th>Passions</th>
+                <th>Loisir</th>
+               
+                 -->
+                 
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                
+                <td>{{ entity.nom }}</td>
+                <td>{{ entity.prenom }}</td>
+                <td>
+                	{% if entity.sexe=='f'%}{{('<i class="fa fa-female"></i> ')}}{% else %}{{('<i class="fa fa-male"></i> ')}}{% endif %}
+                </td>
+                <td>{{ entity.age }} ans</td>
+                <td>+590{{ entity.telFixe }}</td>
+                <td>+590{{ entity.portable1 }}</td>
+                <td>{{ entity.email }}</td>
+                
+               
+                <!--
+                <td><a href="{{ path('Admin_client_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.dayBirth %}{{ entity.dayBirth|date('d-m-Y') }}{% endif %}</td>
+                <td>+590{{ entity.portable2 }}</td>
+                <td>+590{{ entity.portable3 }}</td> 
+                <td>{{ entity.metier }}</td>
+                <td>{{ entity.passions }}</td>
+                <td>{{ entity.loisir }}</td>
+                 -->
+                <td>
+               
+                        <a href="{{ path('Admin_client_show', { 'id': entity.id }) }}"><i class="fa fa-eye"></i></a>
+               
+                        <a href="{{ path('Admin_client_edit', { 'id': entity.id }) }}"><i class="fa fa-pencil-square-o"></i></a>
+               
+               			<a href="{{ path('Admin_client_delete', { 'id': entity.id }) }}"><i class="fa fa-ban"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+ </div>   
+
+ <div class="row">
+   <div class="col-md-12" id="listingClientcreer">
+        <a href="{{ path('Admin_client_new') }}">
+        	<button class="btn btn-primary">
+        		<i class="fa fa-check-square-o"></i>
+                Creer
+             </button>
+        </a>
+         <a href="{{ path('Admin_search_client',{'type':1,'acteur':0})}}">
+        	<button class="btn btn-warning">
+        		<i class="fa fa-pencil-square-o"></i>
+	             Modifier
+        		
+             </button>
+        </a>
+         <a href="{{ path('Admin_search_client',{'type':0,'acteur':0}) }}">
+        	<button class="btn btn-danger">
+            	<i class="fa fa-ban"></i>
+				Supprimer
+            </button>
+        </a>              
+      </div>
+   </div> 
+    </div>
+   </div> 
+    </div>
+    {% endblock %}

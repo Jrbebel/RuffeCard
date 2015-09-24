@@ -1,0 +1,6 @@
+
+services:
+    app.form.registration:
+        class: RuffeCard\UserGestionBundle\Form\UserType
+        tags:
+            - { name: form.type, alias: ruffecard_usergestionbundle_user_registration }

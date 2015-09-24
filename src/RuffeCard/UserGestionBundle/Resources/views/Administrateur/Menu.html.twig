@@ -1,0 +1,200 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+<div class="row" id="corpsMenu">
+   
+        <div class="col-sm-3 col-md-3" id="menuLeft">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#clients">
+                            <span class="fa fa-users">
+                            </span> Clients</a>
+                        </h4>
+                    </div>
+                    <div id="clients" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+
+	                                    <i class="fa fa-plus"></i>
+	                                    <a href="{{ path('Admin_client_new') }}">Ajouter</a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+	                                    <i class="fa fa-pencil-square-o"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':1,'acteur':0}) }}">Modifier</a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+	                                    <i class="fa fa-ban"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':0,'acteur':0}) }}">Supprimer</a>
+
+                                    </td>
+                                </tr>   
+
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-list-ul"></i>
+	                                    <a href="{{ path('Admin_client') }}"> Listinig</a>                                      
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#entreprises">
+                            <i class="fa fa-shopping-cart"></i>
+                            Entreprises</a>
+                        </h4>
+                    </div>
+                    <div id="entreprises" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-plus"></i>
+	                                    <a href="{{ path('Admin_entreprise_new') }}">Ajouter</a>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-pencil-square-o"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':1,'acteur':1}) }}">Modifier</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-ban"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':0,'acteur':1}) }}">Supprimer</a>
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-list-ul"></i>
+	                                    <a href="{{ path('Admin_entreprise') }}"> Listinig</a>                                      
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    
+                    
+                    </div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#commerciaux">
+                            <i class="fa fa-smile-o"></i>
+                            </span>Commerciaux</a>
+                        </h4>
+                    </div>
+                    <div id="commerciaux" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-plus"></i>
+	                                            <a href="{{ path('Admin_new',{'type':1}) }}">Ajouter</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-pencil-square-o"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':1,'acteur':2}) }}">Modifier</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-ban"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':1,'acteur':2}) }}">Supprimer</a>
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-list-ul"></i>
+	                                    <a href="{{ path('Admin_user',{'acteur':1}) }}"> Listinig</a>                                      
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>               
+                 
+                 
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#managers">
+                            <i class="fa fa-suitcase"></i>                            
+                            Managers</a>
+                        </h4>
+                    </div>
+                    <div id="managers" class="panel-collapse collapse ">
+
+                         <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-plus"></i>
+	                                  <a href="{{ path('Admin_new',{'type':2}) }}">Ajouter</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-pencil-square-o"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':2,'acteur':3}) }}">Modifier</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-ban"></i>
+	                                    <a href="{{ path('Admin_search_client',{'type':2,'acteur':3}) }}">Supprimer</a>
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td>
+	                                    <i class="fa fa-list-ul"></i>
+	                                    <a href={{ path('Admin_user',{'acteur':2}) }}> Listinig</a>                                      
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                   
+                    
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </div>
+
+   
+
+	<div class="col-sm-9 col-md-9" id="corps">
+		
+		{% block corp %}
+		
+		{% endblock corp %}
+		
+	</div>
+</div>
+
+{% endblock body %}

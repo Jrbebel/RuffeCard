@@ -1,0 +1,140 @@
+{% extends "RuffeCardUserGestionBundle:Administrateur:Menu.html.twig" %}
+{% block corp -%}
+  <div id="clientListing">
+	
+       <div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientListingPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-users"></span>Listing des  {% if Type=='1'%}{{('commerciaux')}}{% else
+			%}{{('managers')}}{% endif %}   
+			                     </h2>
+			                </div> 
+
+ <div class="row">
+    <div class="col-md-12" id="tableclientListing">
+   
+    <table class="records_list table table-hover">
+        <thead>
+            <tr class="success">
+
+                          
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>login</th>
+                <th>
+                	<i class="fa fa-female"></i>/<i class="fa fa-male"></i>
+                </th>
+                <th>Age</th>
+                
+                
+                <th>
+                	<i class="fa fa-phone"></i>Fixe
+                	<br>
+                	<i class="fa fa-mobile"></i>Port 1
+                </th>
+                
+                <th><i class="fa fa-envelope-o"></i> Email</th>
+                <th>Actions</th>
+                
+{#                 <th>Usernamecanonical</th>#}
+{#                 <th>Email</th>#}
+{#                 <th>Emailcanonical</th>#}
+{#                 <th>Enabled</th>#}
+{#                 <th>Salt</th>#}
+{#                 <th>Password</th>#}
+{#                 <th>Lastlogin</th>#}
+{#                 <th>Locked</th>#}
+{#                 <th>Expired</th>#}
+{#                 <th>Expiresat</th>#}
+{#                 <th>Confirmationtoken</th>#}
+{#                 <th>Passwordrequestedat</th>#}
+{#                 <th>Roles</th>#}
+{#                 <th>Credentialsexpired</th>#}
+{#                 <th>Credentialsexpireat</th>#}
+{#                 <th>Daybirth</th>#}
+               
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in pagination %}
+            <tr>
+
+				<td>{{ entity.nom }}</td>
+                <td>{{ entity.prenom }}</td>
+				<td>{{ entity.usernameCanonical }}</td>   
+                <td>
+                	{% if entity.sexe=='f'%}{{('<i class="fa fa-female"></i> ')}}{% else %}{{('<i class="fa fa-male"></i> ')}}{% endif %}
+                </td>
+                <td>{{ entity.age }}</td>
+                <td>
+                	{{ entity.telFixe }}
+                	<br>
+                	{{ entity.portable1 }}
+                </td>
+                <td>{{ entity.email }}</td>
+                
+               
+                
+{#                 <td><a href="{{ path('Admin_show', { 'id': entity.id }) }}">{{ entity.username }}</a></td>#}
+{#                 <td>{{ entity.locked }}</td>#}
+{#                 <td>{{ entity.expired }}</td>#}
+{#                 <td>{{ entity.emailCanonical }}</td>#}
+{#                 <td>{{ entity.enabled }}</td>#}
+{#                 <td>{{ entity.salt }}</td>#}
+{#                 <td>{% if entity.expiresAt %}{{ entity.expiresAt|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+{#                 <td>{{ entity.confirmationToken }}</td>#}
+{#                 <td>{% if entity.passwordRequestedAt %}{{ entity.passwordRequestedAt|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+{#                 <td>{{ entity.roles }}</td>#}
+{#                 <td>{{ entity.credentialsExpired }}</td>#}
+{#                 <td>{% if entity.credentialsExpireAt %}{{ entity.credentialsExpireAt|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+{#                 <td>{{ entity.id }}</td>#}
+{#                 <td>{% if entity.dayBirth %}{{ entity.dayBirth|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+{#                 <td>{{ entity.portable2 }}</td>#}
+{#                 <td>{{ entity.portable3 }}</td>#}
+{#  			   <td>{% if entity.lastLogin %}{{ entity.lastLogin|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+
+
+                
+                
+                
+                <td>
+                        <a href="{{ path('Admin_show', { 'id': entity.id,'type': Type }) }}"><i class="fa fa-eye"></i></a>
+                        <a href="{{ path('Admin_edit', { 'id': entity.id,'type': Type }) }}"><i class="fa fa-pencil-square-o"></i></a>
+                 		
+                 		
+                </td>
+                
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+ <div  style="text-align: center " id="pagination">
+    {{ knp_pagination_render(pagination) | raw }}
+    </div>  
+       
+     <div class="row">
+   <div class="col-md-12" id="listingClientcreer">
+        <a href="{{ path('Admin_new',{'type': Type}) }}">
+        	<button class="btn btn-primary">
+        		<i class="fa fa-check-square-o"></i>
+                Creer
+             </button>
+        </a>
+         <a href="{{ path('Admin_search_client',{'type':1,'acteur':0})}}">
+        	<button class="btn btn-warning">
+        		<i class="fa fa-pencil-square-o"></i>
+	             Modifier
+        		
+             </button>
+        </a>
+         <a href="{{ path('Admin_search_client',{'type':0,'acteur':0}) }}">
+        	<button class="btn btn-danger">
+            	<i class="fa fa-ban"></i>
+				Supprimer
+            </button>
+        </a>              
+      </div>
+   </div>   
+
+    {% endblock %}

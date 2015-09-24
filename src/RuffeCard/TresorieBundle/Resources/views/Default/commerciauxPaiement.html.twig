@@ -1,0 +1,36 @@
+{% extends "RuffeCardTresorieBundle:Default:Menu.html.twig" %}
+
+ {% block corp %}
+ 
+<div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientModifPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa	fa-smile-o"></span>Commercial</h2>
+			                </div>
+    
+
+    <table class="record_properties table table-hover">
+        
+		<thead>
+            <tr class="success">
+                <th>Nom</th>
+                <th>Prenom</th>
+             	<th>Règlement</th>
+            </tr>
+        </thead>
+           
+		<tbody> 
+			{% for commercial in Commercial %} 
+            <tr>
+                <td>{{ commercial.nom }}</td>
+                <td>{{ commercial.prenom }}</td>
+                <td><a href="{{ path('Reglerpaiement',{'id': commercial.id,'acteur':2}) }}"> a payer</a></br></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
+
+</div>
+ 		
+{% endblock corp %}

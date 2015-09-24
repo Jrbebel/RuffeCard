@@ -1,0 +1,90 @@
+{% extends "RuffeCardUserGestionBundle:Administrateur:Menu.html.twig" %}
+
+{% block corp -%}
+
+<div id="entrepriseListing">
+	
+       <div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientListingPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-building-o"></span>Listing des entreprises</h2>
+			                </div> 
+
+ <div class="row">
+    <div class="col-md-12" id="tableclientListing">
+    
+   {% if entities is empty %}
+    
+    <h3>Is empty</h3>
+    
+    {% else %}
+     <table class="records_list table table-hover">
+        <thead>
+            <tr class="success">
+{#                 <th>Id</th>#}
+                <th>Societe</th>
+                <th>Numsiret</th>
+                <th>Taille</th>
+                <th>Contactresp</th>
+                <th>Emailresp</th>
+                <th>Telresp</th>
+                <th>Secteuractivite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+{#                 <td><a href="{{ path('Admin_entreprise_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>#}
+                <td>{{ entity.societe }}</td>
+                <td>{{ entity.numsiret }}</td>
+                <td>{{ entity.taille }}</td>
+                <td>{{ entity.contactResp }}</td>
+                <td>{{ entity.emailResp }}</td>
+                <td>{{ entity.telResp }}</td>
+                <td>{{ entity.secteuractivite }}</td>
+        
+                 <td>
+               
+                        <a href="{{ path('Admin_entreprise_show', { 'id': entity.id }) }}"><i class="fa fa-eye"></i></a>
+               
+                        <a href="{{ path('Admin_entreprise_edit', { 'id': entity.id }) }}"><i class="fa fa-pencil-square-o"></i></a>
+               
+               			<a href="{{ path('Admin_entreprise_delete', { 'id': entity.id }) }}"><i class="fa fa-ban"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+    
+     <div class="row">
+   <div class="col-md-12" id="listingClientcreer">
+        <a href="{{ path('Admin_entreprise_new') }}">
+        	<button class="btn btn-primary">
+        		<i class="fa fa-check-square-o"></i>
+                Creer
+             </button>
+        </a>
+         <a href="{{ path('Admin_search_client',{'type':1,'acteur':1})}}">
+        	<button class="btn btn-warning">
+        		<i class="fa fa-pencil-square-o"></i>
+	             Modifier
+        		
+             </button>
+        </a>
+         <a href="{{ path('Admin_search_client',{'type':1,'acteur':1}) }}">
+        	<button class="btn btn-danger">
+            	<i class="fa fa-ban"></i>
+				Supprimer
+            </button>
+        </a>              
+      </div>
+   </div> 
+    
+    
+       </div></div></div>
+       
+       {% endif %}
+    {% endblock %}

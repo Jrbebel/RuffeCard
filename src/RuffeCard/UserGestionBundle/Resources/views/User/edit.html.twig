@@ -1,0 +1,200 @@
+{% extends "RuffeCardUserGestionBundle:Administrateur:Menu.html.twig" %}
+{% block corp -%}
+  <div id="modificationClient">
+     <div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientModifPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-pencil-square-o"></span>Modification d'un  {% if Type=='1'%}{{('commerciaux')}}{% else%}{{('managers')}}{% endif %}</h2>
+			                </div>
+      
+
+<form  class="form-horizontal" role="form" action="{{ path('Admin_client_update',{ 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }} >
+<fieldset class="scheduler-border">
+ <input type="hidden" name="_method" value="PUT" />
+<div class="row">
+
+	<div class="col-md-6">
+	      <div class="form-group">
+	                    <label  class="col-md-6 control-label">Nom</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.nom) }}
+	            {{ form_widget(edit_form.nom) }}
+	        </div>
+	    </div>
+	    <div class="form-group">
+	                    <label  class="col-md-6 control-label">Prénom</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.prenom) }}
+	            {{ form_widget(edit_form.prenom) }}
+	        </div> 
+	    </div>
+	
+	    <div class="form-group">          
+	        <label  class="col-md-6 control-label"><i class="fa fa-calendar"></i>Date de naissance</label>
+	        <div class="col-md-6">
+	
+	
+	
+	            {{ form_errors(edit_form.dayBirth) }}
+	            {{ form_widget(edit_form.dayBirth) }}
+	        </div>  
+	    </div>
+	    <div class="form-group">       
+	
+	        <label  class="col-md-6 control-label">sexe</label>
+	
+	        <div class="col-md-6">
+	
+	
+	            {{ form_errors(edit_form.sexe) }}
+	            {{ form_widget(edit_form.sexe) }}
+	        </div>  
+	
+	    </div>
+	    <div class="form-group">                    
+	
+	        <label  class="col-md-6 control-label">age</label>
+	
+	        <div class="col-md-6">
+	
+	
+	            {{ form_errors(edit_form.age) }}
+	            {{ form_widget(edit_form.age) }}
+	        </div>  
+	
+	    </div>
+	            <div class="form-group">        
+        
+        <label  class="col-md-6 control-label">Métier</label>
+
+
+        <div class="col-md-6">
+
+
+            {{ form_errors(edit_form.metier) }}
+            {{ form_widget(edit_form.metier) }}
+        </div>  
+
+    </div>
+    </div>
+    <div class="col-md-6">
+    
+    <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-phone"></i>Téléphone Fixe </label>
+
+
+        <div class="col-md-6">
+
+            {{ form_errors(edit_form.telFixe) }}
+            {{ form_widget(edit_form.telFixe) }}
+        </div>  
+
+    </div>
+    <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-mobile"></i>Portable 1 </label>
+
+
+        <div class="col-md-6">
+
+
+            {{ form_errors(edit_form.portable1) }}
+            {{ form_widget(edit_form.portable1) }}
+        </div>  
+
+    </div>
+
+
+    <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-mobile"></i>Portable 2 </label>
+
+
+        <div class="col-md-6">
+
+
+            {{ form_errors(edit_form.portable2) }}
+            {{ form_widget(edit_form.portable2) }}
+        </div>  
+
+    </div>
+    
+    
+        <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-mobile"></i>Portable 3 </label>
+
+
+        <div class="col-md-6">
+
+
+            {{ form_errors(edit_form.portable3) }}
+            {{ form_widget(edit_form.portable3) }}
+        </div>  
+
+    </div>
+    
+        <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-envelope-o"></i>Email</label>
+
+
+        <div class="col-md-6">
+
+
+            {{ form_errors(edit_form.email) }}
+            {{ form_widget(edit_form.email) }}
+        </div>  
+
+    </div>
+    
+
+    
+            <div class="form-group">        
+        
+        <label  class="col-md-6 control-label">Passions</label>
+
+
+        <div class="col-md-6">
+
+
+            {{ form_errors(edit_form.passions) }}
+            {{ form_widget(edit_form.passions) }}
+        </div>  
+
+    </div>
+    
+    
+            <div class="form-group">        
+        
+        <label  class="col-md-6 control-label">Loisir</label>
+
+
+        <div class="col-md-6">
+
+
+            {{ form_errors(edit_form.loisir) }}
+            {{ form_widget(edit_form.loisir) }}
+        </div>  
+</div>
+    </div>
+    <div class="col-md-12" id="formClientBouton">
+            <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i>Creer</button>
+            <a href="{{ path('Admin_client') }}"> <button type="button" class ="btn btn-warning"><i class="fa fa-share-square-o"></i> Retour
+                </button>  
+            </a>
+</div>
+  
+   {{ form_rest(edit_form) }}
+   
+ </div>  
+   
+        </fieldset>     
+</form>
+   </div>
+    </div>
+      
+{% endblock %}

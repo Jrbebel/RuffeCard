@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        
+          <link rel="stylesheet" href="{{asset ('css/bootstrap.min.css')}}"/>
+          <link rel="stylesheet" href="{{asset ('css/style.css')}}"/>
+           <link rel="icon" type="image/x-icon" href="{{ asset('hestiaFormation.ico') }}" />
+          <link href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Allura|Cinzel+Decorative:400,900,700' rel='stylesheet' type='text/css'>
+          <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+             
+    </head>
+    <body>
+     <div class="container">
+ <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+
+    </div>
+
+       
+    </body>
+</html>

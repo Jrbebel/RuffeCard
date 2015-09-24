@@ -1,0 +1,76 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+<div class="row" id="corpsMenu">
+   
+        <div class="col-sm-3 col-md-3" id="menuLeft">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="{{ path('Administration_Client_Paiement') }}">
+                            <span class="fa fa-users">
+                            </span> Clients</a>
+                        </h4>
+                    </div>
+              
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="{{ path('Administration_Entreprise_Paiement') }}">
+                            <i class="fa fa-shopping-cart"></i>
+                            Entreprises</a>
+                        </h4>
+                    </div>
+                    <div id="entreprises" class="panel-collapse collapse">
+
+                    
+                    </div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="{{ path('Administration_Commerciaux_Paiement') }}">
+                            <i class="fa fa-smile-o"></i>
+                            </span>Commerciaux</a>
+                        </h4>
+                    </div>
+               
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="{{ path('Administration_Manager_Paiement') }}">
+                            <i class="fa fa-suitcase"></i>                            
+                            Managers</a>
+                        </h4>
+                    </div>
+                    <div id="managers" class="panel-collapse collapse ">
+                   
+                    
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </div>
+
+   
+
+	<div class="col-sm-9 col-md-9" id="corps">
+		
+		{% block corp %}
+		
+		{% endblock corp %}
+		
+	</div>
+</div>
+
+{% endblock body %}

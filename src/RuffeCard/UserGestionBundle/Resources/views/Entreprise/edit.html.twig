@@ -1,0 +1,350 @@
+{% extends "RuffeCardUserGestionBundle:Administrateur:Menu.html.twig" %}
+
+
+
+    {#     {{ form(edit_form) }}#}
+   
+
+{% block corp %}
+   <div id="entrepriseCorps">
+    <div class="panel panel-primary" id="entrepriseCorps">
+			                <div class="panel-heading" id="entrepriseNewPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-building-o"></span>Formulaire d'ajout de nouvelles entreprises</h2>
+			                </div>
+
+<form  class="form-horizontal" role="form" action="{{ path('Admin_entreprise_update',{ 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }} >
+<fieldset class="scheduler-border">
+<div class="row" id="corpsEntreprisePanel">
+
+ 			<div class="col-md-12">
+                 <div class="row" id="rowObjectif">
+			                <div class="col-md-6">
+			                 <div class="panel panel-info" id="objectifPanelDashboard">
+			                <div class="panel-heading">
+			                    <h3 class="panel-title">
+			                        <span class="fa fa-shopping-cart"></span> L'entreprise</h3>
+			                </div>
+			                <div class="panel-body" id="objectiftifDashboard">
+			                    <div class="row" id="corpsObjectifDashboard">
+								
+									
+									
+	      <div class="form-group">
+	                    <label  class="col-md-6 control-label">Societe</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.societe) }}
+	            {{ form_widget(edit_form.societe) }}
+	        </div>
+	    </div>
+
+	      <div class="form-group">
+	                    <label  class="col-md-6 control-label">Numéro de siret</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.numsiret) }}
+	            {{ form_widget(edit_form.numsiret) }}
+	        </div>
+	    </div>
+	     
+	    <div class="form-group">
+	                    <label  class="col-md-6 control-label">taille</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.taille) }}
+	            {{ form_widget(edit_form.taille) }}
+	        </div>
+	    </div>
+		
+		<div class="form-group">
+	                    <label  class="col-md-6 control-label">Secteur d'activité</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.secteuractivite) }}
+	            {{ form_widget(edit_form.secteuractivite) }}
+	        </div>
+	    </div>								
+								</div>
+							</div>
+						</div>
+								<div class="panel panel-success" id="objectifPanelDashboard">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+					                        <span class="fa fa-suitcase"></span> Réduction
+					                    </h3>
+					                </div>
+					                <div class="panel-body" id="objectiftifDashboard">
+					                    <div class="row" id="corpsObjectifDashboard">
+										
+											<div class="form-group">
+												<label  class="col-md-6 control-label">Pourcentage</label>
+										
+										        <div class="col-md-6">
+										            {{ form_errors(edit_form.pourcentage) }}
+										            {{ form_widget(edit_form.pourcentage) }}
+										        </div>
+										    </div>
+					       
+											<div class="form-group">
+												<label  class="col-md-6 control-label">Association</label>
+										
+										        <div class="col-md-6">
+										            {{ form_errors(edit_form.association) }}
+										            {{ form_widget(edit_form.association) }}
+										        </div>
+										    </div>	      									
+										</div>
+									</div>
+								</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					    <div class="col-md-6">
+			                 <div class="panel panel-success" id="objectifPanelDashboard">
+			                <div class="panel-heading">
+			                    <h3 class="panel-title">
+			                        <span class="fa fa-suitcase"></span> Le responsable</h3>
+			                </div>
+			                <div class="panel-body" id="objectiftifDashboard">
+			                    <div class="row" id="corpsObjectifDashboard">
+								
+									
+									
+	    	    
+		<div class="form-group">
+	                    <label  class="col-md-6 control-label">Contact Responsable</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.contactResp) }}
+	            {{ form_widget(edit_form.contactResp) }}
+	        </div>
+	    </div>
+	       
+		<div class="form-group">
+	                    <label  class="col-md-6 control-label">Email du Responsable</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.emailResp) }}
+	            {{ form_widget(edit_form.emailResp) }}
+	        </div>
+	    </div>	       
+
+		<div class="form-group">
+	                    <label  class="col-md-6 control-label">Téléphone du Responsable</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(edit_form.telResp) }}
+	            {{ form_widget(edit_form.telResp) }}
+	        </div>
+	    </div>									
+								</div>
+							</div>
+						</div>
+								<div class="row" id="corpsEntreprisePanel">
+			
+									<div class="col-md-12">
+										<div class="row" id="rowObjectif">
+											<div class="col-md-12">
+												<div class="panel panel-warning" id="objectifPanelDashboard">
+													<div class="panel-heading">
+										                    <h3 class="panel-title">
+										                        <span class="fa fa-shopping-cart"></span> Autre informations</h3>
+										            </div>
+										            <div class="panel-body" id="objectiftifDashboard">
+										            	<div class="row" id="corpsObjectifDashboard">
+															
+														    <div class="form-group">
+											                    <label  class="col-md-6 control-label">Site Web</label>
+														
+														        <div class="col-md-6">
+																	{{ form_errors(edit_form.site) }}
+														            {{ form_widget(edit_form.site) }}
+														        </div>
+															</div>
+														    <div class="form-group">
+															    <label  class="col-md-6 control-label">Facebook</label>
+								
+														        <div class="col-md-6">
+														           {{ form_errors(edit_form.facebook) }}
+														           {{ form_widget(edit_form.facebook) }}
+														        </div>
+														    </div>
+														    <div class="form-group">     
+								   					   			<label  class="col-md-6 control-label">Autre</label>
+								
+														        <div class="col-md-6">
+														           {{ form_errors(edit_form.autre) }}
+														           {{ form_widget(edit_form.autre) }}
+														        </div>
+								    						</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+					</div>
+					
+					
+				</div>
+					<div class="row" id="corpsEntreprisePanel">
+			
+					<div class="col-md-12">
+						<div class="row" id="rowObjectif">
+							<div class="col-md-12">
+								<div class="panel panel-warning" id="objectifPanelDashboard">
+									<div class="panel-heading">
+						                    <h3 class="panel-title">
+						                        <span class="fa fa-map-marker"></span> Adresse</h3>
+						            </div>
+						            <div class="panel-body" id="objectiftifDashboard">
+						            	<div class="row" id="corpsObjectifDashboard">
+											
+		
+				    						
+				    						
+				    							<div class="col-md-5 adresseForm" id="ajout_adresse" >
+											    	
+				    						 			<div class="form-group">  
+				    							 			{{ form_widget(edit_form) }}
+				    						  			</div>
+					    							
+				    							</div>
+				    						</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+	    
+
+	    	     
+    </div>
+    
+    
+    
+
+    
+    
+    
+    
+
+    <div class="col-md-12" id="formEntrepriseBouton">
+            <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i>Valider</button>
+            <!-- btn retour -->
+            <a href="{{ path('Admin_entreprise') }}"> 
+            	<button type="button" class ="btn btn-warning">
+            		<i class="fa fa-share-square-o"></i>
+            		Retour
+                </button>  
+            </a>
+</div>
+  
+  {{ form(edit_form) }}</li>
+   
+ </div>  
+   
+        </fieldset>     
+</form>
+
+</div>
+</div>
+{% endblock %}
+
+
+  {% block javascripts %}
+
+{# On charge la bibliothèque jQuery. Ici, je la prends depuis le site jquery.com,
+12   mais si vous l'avez en local, changez simplement l'adresse. #}
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+{# Voici le script en question : #}
+<script type="text/javascript">
+$(document).ready(function() {
+	
+  // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+  var $container = $('div#ruffecard_usergestionbundle_entreprise_adresse');
+  
+ // On ajoute un lien pour ajouter une nouvelle catégorie
+  var $lienAjout = $('<a href="#" id="ajout_adresse" class="btn btn-info">Ajouter l\'adresse d\'autre enseigne</a>');
+  $container.append($lienAjout);
+
+  // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+  $lienAjout.click(function(e) {
+    ajouterAdresse($container);
+    e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+    return false;
+      });
+
+  // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+ var index = $container.find(':input').length;
+
+  // On ajoute un premier champ directement s'il n'en existe pas déjà un (cas d'un nouvel article par exemple).
+  if (index == 0) {
+    ajouterAdresse($container);
+  } else {
+   // Pour chaque catégorie déjà existante, on ajoute un lien de suppression
+    $container.children('div').each(function() {
+      ajouterLienSuppression($(this));
+    });
+  }
+
+  // La fonction qui ajoute un formulaire Categorie
+  function ajouterAdresse($container) {
+    // Dans le contenu de l'attribut « data-prototype », on remplace :
+    // - le texte "__name__label__" qu'il contient par le label du champ
+    // - le texte "__name__" qu'il contient par le numéro du champ
+    var $prototype = $($container.attr('data-prototype').replace(/__name__label__/g, 'Adresse n°' + (index+1))
+                                                        .replace(/__name__/g, index));
+
+    // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+    ajouterLienSuppression($prototype);
+
+    // On ajoute le prototype modifié à la fin de la balise <div>
+    $container.append($prototype);
+
+    // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+    index++;
+  }
+
+  // La fonction qui ajoute un lien de suppression d'une categorie
+  function ajouterLienSuppression($prototype) {
+    // Création du lien
+    $lienSuppression = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+
+    // Ajout du lien
+    $prototype.append($lienSuppression);
+
+    // Ajout du listener sur le clic du lien
+    $lienSuppression.click(function(e) {
+      $prototype.remove();
+      e.preventDefault(); // évite qu'un # apparaisse dans l
+      return false;
+    });
+  }
+});
+</script>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+    

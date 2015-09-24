@@ -1,0 +1,306 @@
+{% extends "RuffeCardUserGestionBundle:Administrateur:Menu.html.twig" %}
+
+{% block corp -%}
+<div id="clientCorps">
+    <div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientNewPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-users"></span>Formulaire d'ajout de nouveaux clients</h2>
+			                </div>
+
+
+<form  class="form-horizontal" role="form" action="{{ path('Admin_client_create') }}" method="post" {{ form_enctype(form) }} >
+<fieldset class="scheduler-border">
+<div class="row">
+
+	<div class="col-md-6">
+	      <div class="form-group">
+	                    <label  class="col-md-6 control-label">Nom</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(form.nom) }}
+	            {{ form_widget(form.nom) }}
+	        </div>
+	    </div>
+	    <div class="form-group">
+	                    <label  class="col-md-6 control-label">Prénom</label>
+	
+	        <div class="col-md-6">
+	            {{ form_errors(form.prenom) }}
+	            {{ form_widget(form.prenom) }}
+	        </div> 
+	    </div>
+	
+	    <div class="form-group">          
+	        <label  class="col-md-6 control-label"><i class="fa fa-calendar"></i>Date de naissance</label>
+	        <div class="col-md-6">
+	
+	
+	
+	            {{ form_errors(form.dayBirth) }}
+	            {{ form_widget(form.dayBirth) }}
+	        </div>  
+	    </div>
+	    <div class="form-group">       
+	
+	        <label  class="col-md-6 control-label">sexe</label>
+	
+	        <div class="col-md-6">
+	
+	
+	            {{ form_errors(form.sexe) }}
+	            {{ form_widget(form.sexe) }}
+	        </div>  
+	
+	    </div>
+	    <div class="form-group">                    
+	
+	        <label  class="col-md-6 control-label">age</label>
+	
+	        <div class="col-md-6">
+	
+	
+	            {{ form_errors(form.age) }}
+	            {{ form_widget(form.age) }}
+	        </div>  
+	
+	    </div>
+	            <div class="form-group">        
+        
+        <label  class="col-md-6 control-label">Métier</label>
+
+        <div class="col-md-6">
+
+            {{ form_errors(form.metier) }}
+            {{ form_widget(form.metier) }}
+        </div>  
+
+    </div>
+    </div>
+    <div class="col-md-6">
+    
+    <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-phone"></i>Téléphone Fixe </label>
+
+        <div class="col-md-6">
+
+            {{ form_errors(form.telFixe) }}
+            {{ form_widget(form.telFixe) }}
+        </div>  
+
+    </div>
+    <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-mobile"></i>Portable 1 </label>
+
+        <div class="col-md-6">
+            {{ form_errors(form.portable1) }}
+            {{ form_widget(form.portable1) }}
+        </div>  
+
+    </div>
+
+    <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-mobile"></i>Portable 2 </label>
+
+        <div class="col-md-6">
+
+            {{ form_errors(form.portable2) }}
+            {{ form_widget(form.portable2) }}
+        </div>  
+
+    </div>
+    
+    
+        <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-mobile"></i>Portable 3 </label>
+
+        <div class="col-md-6">
+
+            {{ form_errors(form.portable3) }}
+            {{ form_widget(form.portable3) }}
+        </div>  
+
+    </div>
+    
+        <div class="form-group">        
+        
+        <label  class="col-md-6 control-label"><i class="fa fa-envelope-o"></i>Email</label>
+
+        <div class="col-md-6">
+
+            {{ form_errors(form.email) }}
+            {{ form_widget(form.email) }}
+        </div>  
+
+    </div>
+    
+
+    
+            <div class="form-group">        
+        
+        <label  class="col-md-6 control-label">Passions</label>
+
+        <div class="col-md-6">
+
+            {{ form_errors(form.passions) }}
+            {{ form_widget(form.passions) }}
+        </div>  
+
+    </div>
+    
+    
+            <div class="form-group">        
+        
+        <label  class="col-md-6 control-label">Loisir</label>
+
+        <div class="col-md-6">
+
+            {{ form_errors(form.loisir) }}
+            {{ form_widget(form.loisir) }}
+        </div>  
+</div>
+
+    </div>
+   
+
+
+  
+
+   
+   
+ </div>  
+   
+				<div class="row" id="corpsEntreprisePanel">
+			
+					<div class="col-md-12">
+						<div class="row" id="rowObjectif">
+							<div class="col-md-12">
+								<div class="panel panel-warning" id="objectifPanelDashboard">
+									<div class="panel-heading">
+						                    <h3 class="panel-title">
+						                        <span class="fa fa-map-marker"></span> Adresse</h3>
+						            </div>
+						            <div class="panel-body" id="objectiftifDashboard">
+						            	<div class="row" id="corpsObjectifDashboard">
+											
+		
+				    						
+				    						
+				    							<div class="col-md-5 adresseForm" id="ajout_adresse" >
+											    	
+				    						 			<div class="form-group">  
+				    							 			{{ form_widget(form) }}
+				    						  			</div>
+					    							
+				    							</div>
+				    						</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+		    <div class="col-md-12" id="formClientBouton">
+            <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i>Creer</button>
+            <!-- btn retour -->
+            <a href="{{ path('Admin_client') }}"> 
+            	<button type="button" class ="btn btn-warning">
+            		<i class="fa fa-share-square-o"></i>
+            		Retour
+                </button>  
+            </a>
+</div> 	
+				
+				
+				
+        </fieldset>   
+           {{ form_rest(form) }}  
+</form>
+
+</div>
+</div>
+{% endblock %}
+
+ {% block javascripts %}
+
+{# On charge la bibliothèque jQuery. Ici, je la prends depuis le site jquery.com,
+12   mais si vous l'avez en local, changez simplement l'adresse. #}
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+{# Voici le script en question : #}
+<script type="text/javascript">
+$(document).ready(function() {
+	
+  // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+  var $container = $('div#ruffecard_usergestionbundle_client_adresse');
+  
+ // On ajoute un lien pour ajouter une nouvelle catégorie
+  var $lienAjout = $('<a href="#" id="ajout_adresse" class="btn btn-info">Ajouter l\'adresse d\'autre enseigne</a>');
+  $container.append($lienAjout);
+
+  // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+  $lienAjout.click(function(e) {
+    ajouterAdresse($container);
+    e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+    return false;
+      });
+
+  // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+ var index = $container.find(':input').length;
+
+  // On ajoute un premier champ directement s'il n'en existe pas déjà un (cas d'un nouvel article par exemple).
+  if (index == 0) {
+    ajouterAdresse($container);
+  } else {
+   // Pour chaque catégorie déjà existante, on ajoute un lien de suppression
+    $container.children('div').each(function() {
+      ajouterLienSuppression($(this));
+    });
+  }
+
+  // La fonction qui ajoute un formulaire Categorie
+  function ajouterAdresse($container) {
+    // Dans le contenu de l'attribut « data-prototype », on remplace :
+    // - le texte "__name__label__" qu'il contient par le label du champ
+    // - le texte "__name__" qu'il contient par le numéro du champ
+    var $prototype = $($container.attr('data-prototype').replace(/__name__label__/g, 'Adresse n°' + (index+1))
+                                                        .replace(/__name__/g, index));
+
+    // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+    ajouterLienSuppression($prototype);
+
+    // On ajoute le prototype modifié à la fin de la balise <div>
+    $container.append($prototype);
+
+    // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+    index++;
+  }
+
+  // La fonction qui ajoute un lien de suppression d'une categorie
+  function ajouterLienSuppression($prototype) {
+    // Création du lien
+    $lienSuppression = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+
+    // Ajout du lien
+    $prototype.append($lienSuppression);
+
+    // Ajout du listener sur le clic du lien
+    $lienSuppression.click(function(e) {
+      $prototype.remove();
+      e.preventDefault(); // évite qu'un # apparaisse dans l
+      return false;
+    });
+  }
+});
+</script>
+
+
+{% endblock %}
+ 

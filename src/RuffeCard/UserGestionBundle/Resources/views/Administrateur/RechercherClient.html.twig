@@ -1,0 +1,86 @@
+{% extends "RuffeCardUserGestionBundle:Administrateur:Menu.html.twig" %}
+
+
+
+{% block corp %}
+<div class="col-md-12" id="rechercheClient">
+    <div class="panel panel-primary" id="clientCorps">
+			                <div class="panel-heading" id="clientNewPanel">
+			                    <h2 class="panel-title">
+			                        <span class="fa fa-search"></span>Recherche</h2>
+			                </div>
+    
+<form method="post" >
+<div id="formRechercheClient">
+<input type="text" id="SearchClient" />
+
+    <input type="hidden" id="institut" name="institut" />
+        <input type="hidden" id="type" name="type" />
+
+
+<button type="submit" class="btn btn-success">	<i class="fa fa-search"></i> Rechercher</button>
+</div>
+</form>
+</div>
+</div>
+{% endblock %}
+{% block javascripts %}
+       <script type="text/javascript" src="{{ asset('js/jquery-1.8.0.min.js') }}"></script>
+               <script type="text/javascript" src="{{ asset('js/jquery.ui.widget.js') }}"></script>
+       <script type="text/javascript" src="{{ asset('js/jquery.ui.autocomplete.js') }}"></script>
+               <script type="text/javascript" src="{{ asset('js/jquery.ui.core.js') }}"></script>
+                       <script type="text/javascript" src="{{ asset('js/jquery.ui.position.js') }}"></script>
+                               <script type="text/javascript" src="{{ asset('js/jquery-ui-1.8.23.custom.min.js') }}"></script>
+<script type="text/javascript">
+
+       $(document).ready(function () {
+     
+            $("#SearchClient").autocomplete({
+                source: function (request, response) {
+                    var motcle = $('#SearchClient').val();
+                    var DATA = 'motcle=' + motcle;
+                    $.ajax({
+                        url: "{{ path('Admin_search_client',{'type':type,'acteur':acteur}) }}", 
+                        type: "POST", 
+                        dataType: "json",
+                        data: DATA,
+                        success: function (data) {
+                              
+                            response($.map(data, function (item,i) {
+                                return { 
+                                    label: item, 
+                                    value: item,
+                                    id:i}
+                            }))
+                        }
+                    })
+                },
+                select: function (event, ui) {
+                  
+                    $('#institut').val( ui.item.id);
+                
+                },
+                change: function (event, ui) {
+                 
+                    $('#institut').val(ui.item.id);
+
+
+
+                }
+            });
+     
+      });
+     
+     
+      
+    </script>
+{% endblock %}
+{% block css %}
+{#   <link rel="stylesheet" href="{{asset ('css/jquery.ui.autocomplete.css')}}" type="text/css" />#}
+    <link rel="stylesheet" href="{{asset ('css/jquery.autocomplete.css')}}" type="text/css" />
+        <link rel="stylesheet" href="{{asset ('css/jquery.ui.all.css')}}" type="text/css" />
+       <link rel="stylesheet" href="{{asset ('css/jquery.ui.theme')}}" type="text/css" /> 
+        <link rel="stylesheet" href="{{asset ('css/jquery-ui-1.8.23.custom')}}" type="text/css" /> 
+              <link rel="stylesheet" href="{{asset ('css/jquery.ui.base')}}" type="text/css" /> 
+       
+{% endblock %}

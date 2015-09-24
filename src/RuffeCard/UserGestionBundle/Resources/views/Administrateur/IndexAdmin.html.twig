@@ -1,0 +1,131 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+			
+	<div class="row" id="">
+ <div class="col-md-12">
+            <div class="panel panel-primary" id="dashboard">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-bookmark"></span> DASHBOARD</h3>
+                </div>
+                
+                 <div class="row" id="rowObjectif">
+			                <div class="col-md-12">
+			                 <div class="panel panel-danger" id="objectifPanelDashboard">
+			                <div class="panel-heading">
+			                    <h3 class="panel-title">
+			                        <span class="glyphicon glyphicon-bookmark"></span> Objectifs</h3>
+			                </div>
+			                <div class="panel-body" id="objectiftifDashboard">
+			                    <div class="row" id="corpsObjectifDashboard">
+									
+									
+									<ul>
+										<li>Objectif 1</li>
+										<li>Objectif 2</li>
+										<li>Objectif 3</li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                
+                
+                
+                <div class="row" id="rowRecapitulatif">
+			                <div class="col-md-5 col-md-offset-1">
+			                 <div class="panel panel-primary" id="recapitulatifPanelDashboard">
+			                <div class="panel-heading">
+			                    <h3 class="panel-title">
+			                        <span class="glyphicon glyphicon-bookmark"></span> Récapitulatifs</h3>
+			                </div>
+			                <div class="panel-body" id="recapitulatifDashboard">
+			                    <div class="row" id="corpsRecaptitulatifDashboard">
+			                          
+			                          <a href="#" class="btn btn-info btn-lg" role="button">
+			                          	<span class="fa fa-users "></span>
+			                          	<br/>
+			                          	{{ Count ['Client'] }}
+			                          	<br/>
+			                          	Clients
+			                          </a>
+			                          <a href="#" class="btn btn-danger btn-lg" role="button">
+			                            <span class="fa fa-shopping-cart"></span>
+			                            <br/> 
+			                            {{ Count ['Entreprise'] }}
+			                          	<br/>
+			                          	Entreprises
+			                          </a>
+			                          <a href="#" class="btn btn-warning btn-lg" role="button">
+			                            <span class="fa fa-smile-o"></span>
+			                            <br/>
+			                            {{ Count ['Commercial'] }}
+			                          	<br/>
+			                          	 Commerciaux
+			                          </a>
+			                          <a href="#" class="btn btn-primary btn-lg" role="button">
+			                            <span class="fa fa-suitcase"></span>
+			                            <br/>
+			                           {{ Count ['Manager'] }}
+			                          	<br/>			                          	
+			                          	Managers
+			                          </a>
+			                          
+			                          
+			                	    </div>
+			                    </div>
+							</div>
+                    	</div>
+
+			                <div class="col-md-5">
+			                 <div class="panel panel-primary" id="liensSociauxPanelDashboard">
+			                <div class="panel-heading ">
+			                    <h3 class="panel-title">
+			                        <span class="glyphicon glyphicon-bookmark"></span>Liens Sociaux</h3>
+			                </div>
+			                <div class="panel-body" id="recapitulatifDashboard">
+			                    <div class="row" id="corpsRecaptitulatifDashboard">
+			                          
+			                          <a href="#" class="btn btn-info btn-lg" role="button">
+			                          	<span class="fa fa-facebook fa-2x"></span>
+			                          	<br/>
+			                          	Facebook
+			                          </a>
+			                          <a href="#" class="btn btn-danger btn-lg" role="button">
+			                            <span class="fa fa-linkedin fa-2x"></span>
+			                           <br/>
+			                          	Linkedin
+			                          </a>
+			                          <a href="#" class="btn btn-warning btn-lg" role="button">
+			                            <span class="fa fa-twitter fa-2x"></span>
+			                           <br/>
+			                          	Twitter
+			                          </a>
+			                          <a href="#" class="btn btn-success btn-lg " role="button">
+			                          	<span class="glyphicon glyphicon-globe"></span>
+			                           	 <br/>
+			                           	 Site Web
+			                           </a>
+			                          
+			                          
+			                	    </div>
+			                    </div>
+							</div>
+                    	</div>
+				</div>  
+				
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+			
+			
+			
+		
+{% endblock body %}
+		

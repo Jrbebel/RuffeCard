@@ -1,0 +1,288 @@
+
+
+
+.container{
+
+/*margin: 0px 0px 0px 0px;*/
+
+
+}
+
+/**************************
+ * DASHBOARD
+ * ******************/
+#rowDashboard{
+margin-top: 30px;
+margin-bottom: 70px;
+}
+#dashboard{
+
+background-color: lightblue;
+}
+
+#recapitulatifDashboard {
+text-align: center;
+
+} 
+#corpsRecapitulatifDashboard {
+padding-bottom: 15px
+}
+#corpsRecapitulatifDashboard  a{
+min-width: 125px;
+}
+
+#recapitulatifPanelDashboard, #liensSociauxPanelDashboard, #objectifPanelDashboard{
+margin:20px 10px 10px 10px;
+}
+
+
+#corpsRecaptitulatifDashboard >a {
+min-width: 147px;
+min-height: 90px;
+margin: 2px;
+}
+/**************************
+ * fonts
+ * ******************/
+#clientCorps h1, #clientListing h1, #editClientCorps h1, #rechercheClient h1, #modificationClient h1{
+font-family: 'Eagle Lake', cursive;
+margin-top: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align:center;
+}
+}
+
+
+/**************************
+ * RECHERCHE
+ * ******************/
+
+#rechercheClient{
+
+
+}
+
+
+#formRechercheClient{
+
+text-align:center;
+
+
+}
+
+/**************************
+ * FORMULAIRE ENTREPRISE 
+ * ******************/
+#formEntrepriseBouton {
+text-align: right;
+margin: 10px 10px 10px -10px;
+}
+
+#corpsEntreprisePanel {
+margin-top: 20px;
+}
+#ruffecard_usergestionbundle_entreprise > div > label{
+display:none;
+}
+
+.adresseForm{
+text-align:right;
+}
+/**************************
+ * FORMULAIRE CLIENT 
+ * ******************/
+#clientCorps{
+
+color:black;
+margin-top: 0px;
+border-radius: 5px;
+
+}
+
+#clientCorps h1{
+color:black;
+text-shadow:2px 2px 2px grey;
+text-align:center;
+margin-bottom: 25px;
+
+}
+#clientCorps .form-horizontal .row .col-md-6{
+padding-left: 16px;
+padding-right: 0px;
+
+}
+
+#clientNewPanel, #clientModifPanel{
+margin-bottom: 20px
+}
+
+#formClientBouton{
+text-align: center;
+padding-bottom: 5px;
+}
+
+#listingClientcreer{
+text-align: right;
+margin: 10px 10px 10px -25px;
+
+}
+
+/**************************
+ * LISTING CLIENT 
+ * ******************/
+
+#clientListing h1{
+text-align:center;
+margin-bottom: 25px;
+}
+#tableclientListing{
+
+
+}
+
+
+
+/**************************
+ * EDITION  CLIENT 
+ * ******************/
+#editClientCorps h1{
+
+text-align:center;
+margin-bottom: 25px;
+}
+
+
+#editClientBtn{
+
+text-align:center;
+}
+/**************************
+ * NAV BAR 
+ * ******************/
+#top-nav{
+margin-bottom: 0px;
+}
+
+i {
+  font-size:16px;
+}
+
+.nav > li > a {
+  color:#787878;
+}
+  
+footer {
+  margin-top:70px;
+ 
+  background-color:#efefef;
+  position: fixed;
+width: 100%;
+bottom: 0px;
+}
+
+/* count indicator near icons */
+.nav>li .count {
+  position: absolute;
+  bottom: 12px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: normal;
+  background: rgba(51,200,51,0.55);
+  color: rgba(255,255,255,0.9);
+  line-height: 1em;
+  padding: 2px 4px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* indent 2nd level */
+.list-unstyled li > ul > li {
+   margin-left:10px;
+   padding:8px;
+}
+
+/**************************
+ * container menu + corps
+ * ******************/
+
+#corpsMenu{
+margin-top: 20px;
+margin-bottom: 100px;
+}
+
+/**************************
+ * NAV BAR LEFT
+ * ******************/
+#menuLeft{
+
+padding-left:15px;
+padding-right: 15px;
+}
+
+.panel{
+
+
+}
+
+.fa{
+padding-right: 5px;
+
+}
+/**************************
+ * Corps
+ * ******************/
+
+#corps{
+
+
+border-radius: 5px;
+
+
+padding:0px ;
+
+
+
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  
+}
+/* Since positioning the image, we need to help out the caption */
+
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height:12(px;
+  background-color:#bbb;
+}
+.carousel img {
+
+  min-width: 100%;
+  
+}
+
+
+/*
+ * -------------------------------------------------*/
+ 
+#dropdown-connexion{
+width: 250px;
+}
+.dropdown-menu {
+min-width: 250px;
+}
+@media (min-width: 768px){
+body > div.navbar.navbar-inverse.navbar-top > div > div.navbar-collapse.collapse > ul.nav.navbar-nav.navbar-right > li > ul{
+
+width: 250px;
+text-align: center;
+}
+
+}
